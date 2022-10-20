@@ -1,4 +1,4 @@
-#Fri May 27 13:35:45 MSK 2022
+#Thu Oct 20 17:25:36 MSK 2022
 base.0=/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
