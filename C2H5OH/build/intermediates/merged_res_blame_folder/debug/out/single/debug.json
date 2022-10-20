@@ -4,20 +4,32 @@
         "source": "ru.t022.c2h5oh.C2H5OH-main-7:/menu/menu_main.xml"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-xhdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-xhdpi/ic_launcher.png"
+        "merged": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-merged_res-5:/xml_settings.xml.flat",
+        "source": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-main-7:/xml/settings.xml"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-xxhdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-xxhdpi/ic_launcher.png"
+        "merged": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-merged_res-5:/layout_activity_fullscreen.xml.flat",
+        "source": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-main-7:/layout/activity_fullscreen.xml"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-mdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-mdpi/ic_launcher.png"
+        "merged": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-merged_res-5:/menu_menu_main.xml.flat",
+        "source": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-main-7:/menu/menu_main.xml"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-hdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-hdpi/ic_launcher.png"
+        "merged": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-main-7:/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-mdpi_ic_launcher.png.flat",
+        "source": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-main-7:/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-main-7:/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/user/.gradle/daemon/7.3.3/ru.t022.c2h5oh.C2H5OH-main-7:/drawable-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/xml_settings.xml.flat",
