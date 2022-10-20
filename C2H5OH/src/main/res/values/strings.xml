@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">C2H5OH</string>
+    <string name="dummy_button">РАСЧИТАТЬ</string>
+    <string name="dummy_content">T = 20°С</string>
+
+	<string name="menu_about">О программе</string>
+	<string name="menu_set">Настройки</string>
+	<string name="sleep">Уходить в сон</string>
+	
+</resources>

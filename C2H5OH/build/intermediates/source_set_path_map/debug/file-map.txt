@@ -1,0 +1,8 @@
+ru.t022.c2h5oh.C2H5OH-pngs-0 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/build/generated/res/pngs/debug
+ru.t022.c2h5oh.C2H5OH-resValues-1 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/build/generated/res/resValues/debug
+ru.t022.c2h5oh.C2H5OH-rs-2 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/build/generated/res/rs/debug
+ru.t022.c2h5oh.C2H5OH-mergeDebugResources-3 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
+ru.t022.c2h5oh.C2H5OH-mergeDebugResources-4 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+ru.t022.c2h5oh.C2H5OH-merged_res-5 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/build/intermediates/merged_res/debug
+ru.t022.c2h5oh.C2H5OH-debug-6 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/debug/res
+ru.t022.c2h5oh.C2H5OH-main-7 /home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res

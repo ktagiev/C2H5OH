@@ -1,0 +1,105 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea/
+* .idea/.gitignore
+* .idea/encodings.xml
+* .idea/libraries/
+* .idea/libraries/android_support_v4.xml
+* .idea/libraries/android_support_v4_a913316465149351f0f6ea84539d6fd9.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/workspace.xml
+* C2H5OH.iml
+* ic_launcher-web.png
+* out/
+* out/production/
+* out/production/C2H5OH/
+* out/production/C2H5OH/ru/
+* out/production/C2H5OH/ru/t022/
+* out/production/C2H5OH/ru/t022/c2h5oh/
+* out/production/C2H5OH/ru/t022/c2h5oh/BuildConfig.class
+* out/production/C2H5OH/ru/t022/c2h5oh/Fertman.class
+* out/production/C2H5OH/ru/t022/c2h5oh/MainActivity$1.class
+* out/production/C2H5OH/ru/t022/c2h5oh/MainActivity$2.class
+* out/production/C2H5OH/ru/t022/c2h5oh/MainActivity.class
+* out/production/C2H5OH/ru/t022/c2h5oh/PrefActivity.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$attr.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$color.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$drawable.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$id.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$layout.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$menu.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$string.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$style.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$styleable.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R$xml.class
+* out/production/C2H5OH/ru/t022/c2h5oh/R.class
+* proguard-project.txt
+* tabl_spirta_files/
+* tabl_spirta_files/6.gif
+* tabl_spirta_files/ads_w2f.js
+* tabl_spirta_files/ads_w2h.js
+* tabl_spirta_files/counter.xhtml
+* tabl_spirta_files/criteo_narod_rta_240x400.js
+* tabl_spirta_files/cv.gif
+* tabl_spirta_files/dspixel.js
+* tabl_spirta_files/html.html
+* tabl_spirta_files/jquery-1.7.2.js
+* tabl_spirta_files/rta.js
+* tabl_spirta_files/saved_resource
+* tabl_spirta_files/saved_resource(1)
+* tabl_spirta_files/saved_resource(2)
+* tabl_spirta_files/saved_resource(3)
+* tabl_spirta_files/track.js
+* tabl_spirta_files/uutils(1).fcg
+* tabl_spirta_files/uutils.fcg
+* tabl_spirta_files/uwnd.js
+* tabl_spirta_files/watch.js
+* tabl_spirta_files/wrapper_video.css
+*  ¡«¨æ  à §¡ ¢«¥­¨ï ¥àâ¬ ­ .gif
+*  ¡«¨æ  á¦ â¨ï ®¡êñ¬  ¯® ¥àâ¬ ­ã.JPG
+*  ¡«¨æë.htm
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.0.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => C2H5OH/src/main/AndroidManifest.xml
+* assets/ => C2H5OH/src/main/assets
+* res/ => C2H5OH/src/main/res/
+* src/ => C2H5OH/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

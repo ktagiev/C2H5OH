@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "ru.t022.c2h5oh.C2H5OH-mergeDebugResources-3:/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values-v11/styles.xml",
+                    "from": {
+                        "startLines": "8,20,12",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "222,819,364",
+                        "endLines": "10,22,18",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "356,980,811"
+                    },
+                    "to": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,143,307",
+                        "endLines": "4,7,14",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "138,302,748"
+                    }
+                }
+            ]
+        }
+    ]
+}
