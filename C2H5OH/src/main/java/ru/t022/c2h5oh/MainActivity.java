@@ -83,7 +83,7 @@ public class MainActivity extends Activity
 
 				if(etxtV1.isFocused())
 				{
-					V1 = Integer.valueOf(etxtV1.getText().toString());
+					V1 = Integer.parseInt(etxtV1.getText().toString());
 					if(V1>20000) {V1 = 20000; etxtV1.setText(String.valueOf(V1));}
 				}
 				N0 = Integer.valueOf(txtN0.getText().toString());
