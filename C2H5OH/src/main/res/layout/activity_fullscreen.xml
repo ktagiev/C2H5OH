@@ -47,7 +47,10 @@
 			android:ems="10"
 			android:hint="@string/hintV0"
 			android:inputType="number"
-			android:maxLength="6">
+			android:maxLength="6"
+			android:minHeight="48dp"
+			tools:ignore="DuplicateSpeakableTextCheck"
+			android:importantForAutofill="no">
 
 		</EditText>
 
@@ -75,8 +78,12 @@
 			android:layout_row="3"
 			android:layout_column="1"
 			android:ems="10"
+			android:hint="@string/strength"
 			android:inputType="number"
-			android:maxLength="4" />
+			android:maxLength="4"
+			android:minHeight="48dp"
+			tools:ignore="DuplicateSpeakableTextCheck"
+			android:importantForAutofill="no" />
 
 		<EditText
 			android:id="@+id/editTextN1"
@@ -84,8 +91,11 @@
 			android:layout_row="4"
 			android:layout_column="1"
 			android:ems="10"
+			android:hint="@string/strength"
 			android:inputType="number"
-			android:maxLength="4"/>
+			android:maxLength="4"
+			android:minHeight="48dp"
+			android:importantForAutofill="no" />
 
 		<Button
 			android:id="@+id/button1"
@@ -145,13 +155,18 @@
 
 		<EditText
 			android:id="@+id/editTextV1"
-			android:layout_width="125dp"
+			android:layout_width="80dp"
 			android:layout_row="7"
 			android:layout_column="0"
 			android:layout_gravity="right|fill_vertical"
 			android:alpha="0.7"
 			android:ems="10"
+			android:gravity="center_horizontal|center_vertical"
+			android:hint="@string/required"
+			android:importantForAutofill="no"
 			android:inputType="number"
-			android:maxLength="6" />
+			android:maxLength="6"
+			android:minHeight="48dp"
+			android:textAlignment="gravity" />
 
 	</GridLayout>

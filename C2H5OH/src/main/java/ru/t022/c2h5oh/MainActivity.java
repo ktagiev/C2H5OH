@@ -45,6 +45,8 @@ public class MainActivity extends Activity
 	int V1; // полученный раствор
 	int X; // вода
 
+	int defaultColor;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -66,92 +68,88 @@ public class MainActivity extends Activity
 
 		mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 		onRead();
+		defaultColor=txtV0.getCurrentTextColor();
 
-		OnClickListener oclBtnRes = new OnClickListener()
-		{
-			@Override
-			public void onClick(View v)
+		OnClickListener oclBtnRes = v -> {
+			// X = 100NP/M — 100P
+			// Где N0 – начальная крепость спирта;
+			// V0 — объем изначального спирта в миллилитрах ;
+			// N1 – крепость конечного (требуемого раствора);
+			// X — количество мл воды, которые следует добавить к изначальному раствору.
+			try
 			{
-				// X = 100NP/M — 100P
-				// Где N0 – начальная крепость спирта;
-				// V0 — объем изначального спирта в миллилитрах ;
-				// N1 – крепость конечного (требуемого раствора);
-				// X — количество мл воды, которые следует добавить к изначальному раствору.
-				try
+				V0 = Integer.valueOf(txtV0.getText().toString());
+				if(V0>10000) {V0 = 10000; txtV0.setText(String.valueOf(V0));}
+
+				if(etxtV1.isFocused())
 				{
-					V0 = Integer.valueOf(txtV0.getText().toString());
-					if(V0>10000) {V0 = 10000; txtV0.setText(String.valueOf(V0));}
-					
-					if(etxtV1.isFocused())
+					V1 = Integer.valueOf(etxtV1.getText().toString());
+					if(V1>20000) {V1 = 20000; etxtV1.setText(String.valueOf(V1));}
+				}
+				N0 = Integer.valueOf(txtN0.getText().toString());
+				N1 = Integer.valueOf(txtN1.getText().toString());
+				if ((N0 < 35) || (N0 > 95))
+				{
+					showToast(v, "КРЕПОСТЬ НАЧАЛЬНОГО ВНЕ ДИАПАЗОНА");
+					return;
+				}
+				else
+					if (N1 > N0)
 					{
-						V1 = Integer.valueOf(etxtV1.getText().toString());
-						if(V1>20000) {V1 = 20000; etxtV1.setText(String.valueOf(V1));}
-					}
-					N0 = Integer.valueOf(txtN0.getText().toString());
-					N1 = Integer.valueOf(txtN1.getText().toString());
-					if ((N0 < 35) || (N0 > 95))
-					{
-						showToast(v, "КРЕПОСТЬ НАЧАЛЬНОГО ВНЕ ДИАПАЗОНА");
+						showToast(v, "КРЕПОСТЬ НАЧАЛЬНОГО ДОЛЖНА бЫТЬ ВЫШЕ КОНЕЧНОГО");
 						return;
 					}
-					else
-						if (N1 > N0)
-						{
-							showToast(v, "КРЕПОСТЬ НАЧАЛЬНОГО ДОЛЖНА бЫТЬ ВЫШЕ КОНЕЧНОГО");
-							return;
-						}
-				}
-				catch (Exception e)
+			}
+			catch (Exception e)
+			{
+				showToast(v, "НЕЧИСЛОВЫЕ ПАРАМЕТРЫ");
+				return;
+			}
+
+			try
+			{
+				if(etxtV1.isFocused())
 				{
-					showToast(v, "НЕЧИСЛОВЫЕ ПАРАМЕТРЫ");
-					return;
+					X = Fertman.V0(V1, N0, N1);
+					V1 = Fertman.V1;
+					txtV0.setText(String.valueOf(Fertman.V0));
+					txtV0.setTextColor(Color.RED);
+				}
+				else
+				{
+					X = Fertman.V1(V0, N0, N1);
+					V1 = Fertman.V1;
+					txtV0.setTextColor(defaultColor);
 				}
 
-				try
+				txtV.setText(String.valueOf(V1) + " мл");
+				if(X!=-1)
 				{
-					if(etxtV1.isFocused())
-					{
-						X = Fertman.V0(V1, N0, N1);
-						V1 = Fertman.V1;
-						txtV0.setText(String.valueOf(Fertman.V0));
-						txtV0.setTextColor(Color.RED);
-					}
-					else
-					{
-						X = Fertman.V1(V0, N0, N1);
-						V1 = Fertman.V1;
-						txtV0.setTextColor(Color.BLACK);
-					}	
-						
-					txtV.setText(String.valueOf(V1) + " мл");
-					if(X!=-1)
-					{
-						txtV1.setText(String.valueOf(X) + " мл");
-					}
-					else
-					{
-						txtV1.setText("нет в\nтаблице");
-					}
-						
+					txtV1.setText(String.valueOf(X) + " мл");
 				}
-				catch (ArithmeticException e)
+				else
 				{
-					showToast(v, "ВЫХОД ИЗ ДИАПАЗОНА");
-					return;
+					txtV1.setText("нет в\nтаблице");
 				}
-				catch (ArrayIndexOutOfBoundsException e)
-				{
-					showToast(v, "ВЫХОД ЗA ТАБЛИЦУ ФЕРТМАНА");
-					return;
-				}
-				catch (Exception e)
-				{
-					showToast(v, "КАКОЕ-ТО ИСКЛЮЧЕНИЕ");
-					return;
-				}
-				sBarV0.setProgress(V0);
-				onSave();
+
 			}
+			catch (ArithmeticException e)
+			{
+				showToast(v, "ВЫХОД ИЗ ДИАПАЗОНА");
+				return;
+			}
+			catch (ArrayIndexOutOfBoundsException e)
+			{
+				showToast(v, "ВЫХОД ЗA ТАБЛИЦУ ФЕРТМАНА");
+				return;
+			}
+			catch (Exception e)
+			{
+				showToast(v, "КАКОЕ-ТО ИСКЛЮЧЕНИЕ");
+				return;
+			}
+			sBarV0.setProgress(V0);
+			onSave();
 		};
 		btnRes.setOnClickListener(oclBtnRes);
 

@@ -104,7 +104,5 @@ public class Fertman
 	static public int line(int x, int kx, int ky)
 	{
 		return (ky*x)/kx;
-		
 	}
-	
 }

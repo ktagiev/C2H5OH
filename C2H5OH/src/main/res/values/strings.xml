@@ -18,5 +18,7 @@
     <string name="textV">Объём полученного раствора\nс учётом сжатия</string>
     <string name="text_">-</string>
     <string name="hintV0">объем</string>
+    <string name="strength">крепость</string>
+    <string name="required">нужный</string>
 
 </resources>
