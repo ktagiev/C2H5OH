@@ -60,7 +60,9 @@ public class MainActivity extends Activity
 		txtN1 = (EditText) findViewById(R.id.editTextN1);
 		etxtV1 = (EditText) findViewById(R.id.editTextV1);
 		
-		sBarV0 = (SeekBar) findViewById(R.id.seekBarV0); sBarV0.setEnabled(false); sBarV0.setVisibility(View.GONE);
+		sBarV0 = (SeekBar) findViewById(R.id.seekBarV0);
+		sBarV0.setEnabled(false);
+		sBarV0.setVisibility(View.INVISIBLE);
 
 		mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 		onRead();
@@ -177,7 +179,7 @@ public class MainActivity extends Activity
 	public void showToast(View v, String s)
 	{
 		//создаем и отображаем текстовое уведомление
-		Toast toast = Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT);
+		Toast toast = Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG);
 		toast.setGravity(Gravity.CENTER, 0, 0);
 		toast.show();
 
