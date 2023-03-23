@@ -3,27 +3,23 @@
     android:versionCode="2"
     android:versionName="2.2" >
 
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="15" />
-
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Black.NoTitleBar">
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name">
+            android:screenOrientation="locked"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="PrefActivity"></activity>
+        <activity android:name=".PrefActivity"></activity>
     </application>
 
 </manifest>

@@ -6,6 +6,122 @@
                 {
                     "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values/colors.xml",
                     "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,105",
+                        "endColumns": "49,39",
+                        "endOffsets": "100,140"
+                    }
+                },
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "21,24,27,34,35",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "1086,1169,1241,1569,1605",
+                        "endLines": "23,26,33,34,40",
+                        "endColumns": "12,12,12,35,12",
+                        "endOffsets": "1164,1236,1564,1600,1944"
+                    }
+                },
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/debug/res/values/ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "145",
+                        "endColumns": "56",
+                        "endOffsets": "197"
+                    }
+                },
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,13,14,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,4,4,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,510,584,-1,-1,-1,-1,-1",
+                        "endColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,73,73,-1,-1,-1,-1,-1",
+                        "endOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,579,653,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "202,246,290,338,389,440,481,532,579,627,701,775,853,915,990,1026",
+                        "endColumns": "43,43,47,50,50,40,50,46,47,73,73,77,61,74,35,59",
+                        "endOffsets": "241,285,333,384,435,476,527,574,622,696,770,848,910,985,1021,1081"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/user/.gradle/daemon/7.4/ru.t022.c2h5oh.C2H5OH-merged_res-5:/values-v14_values-v14.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values-v14/styles.xml",
+                    "from": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "220",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "366"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "152"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/user/.gradle/daemon/7.4/ru.t022.c2h5oh.C2H5OH-merged_res-5:/values-v11_values-v11.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values-v11/styles.xml",
+                    "from": {
+                        "startLines": "8,20,12",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "222,819,364",
+                        "endLines": "10,22,18",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "356,980,811"
+                    },
+                    "to": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,143,307",
+                        "endLines": "4,7,14",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "138,302,748"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/user/.gradle/daemon/7.4/ru.t022.c2h5oh.C2H5OH-merged_res-5:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values/colors.xml",
+                    "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
                         "startOffsets": "17,67",
@@ -31,12 +147,29 @@
                         "endOffsets": "522,720,1409,1449,1072"
                     },
                     "to": {
-                        "startLines": "10,13,16,23,24",
+                        "startLines": "21,24,27,34,35",
                         "startColumns": "4,4,4,4,4",
-                        "startOffsets": "437,520,592,920,956",
-                        "endLines": "12,15,22,23,29",
+                        "startOffsets": "1088,1171,1243,1571,1607",
+                        "endLines": "23,26,33,34,40",
                         "endColumns": "12,12,12,35,12",
-                        "endOffsets": "515,587,915,951,1295"
+                        "endOffsets": "1166,1238,1566,1602,1946"
+                    }
+                },
+                {
+                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/debug/res/values/ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "145",
+                        "endColumns": "56",
+                        "endOffsets": "197"
                     }
                 },
                 {
@@ -50,77 +183,29 @@
                         "endOffsets": "495"
                     },
                     "to": {
-                        "startLines": "30",
+                        "startLines": "41",
                         "startColumns": "4",
-                        "startOffsets": "1300",
-                        "endLines": "33",
+                        "startOffsets": "1951",
+                        "endLines": "44",
                         "endColumns": "24",
-                        "endOffsets": "1503"
+                        "endOffsets": "2154"
                     }
                 },
                 {
                     "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "3,4,5,7,8,9",
-                        "startColumns": "4,4,4,1,1,1",
-                        "startOffsets": "56,100,151,200,248,292",
-                        "endColumns": "43,50,50,47,43,44",
-                        "endOffsets": "95,146,197,246,290,335"
+                        "startLines": "3,15,11,4,5,19,7,8,9,13,14,17,12,16,18,10",
+                        "startColumns": "4,4,4,4,4,4,1,1,1,4,4,4,4,4,4,4",
+                        "startOffsets": "56,660,400,100,151,893,200,248,292,510,585,779,448,704,857,340",
+                        "endColumns": "43,43,47,50,50,40,47,43,44,74,74,77,61,74,35,59",
+                        "endOffsets": "95,699,443,146,197,929,246,290,335,580,655,852,505,774,888,395"
                     },
                     "to": {
-                        "startLines": "4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "145,189,240,291,342,389",
-                        "endColumns": "43,50,50,50,46,47",
-                        "endOffsets": "184,235,286,337,384,432"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/values-v11_values-v11.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values-v11/styles.xml",
-                    "from": {
-                        "startLines": "8,20,12",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "222,819,364",
-                        "endLines": "10,22,18",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "356,980,811"
-                    },
-                    "to": {
-                        "startLines": "2,5,8",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,143,307",
-                        "endLines": "4,7,14",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "138,302,748"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/values-v14_values-v14.arsc.flat",
-            "map": [
-                {
-                    "source": "/home/user/AndroidStudioProjects/C2H5OH/C2H5OH/src/main/res/values-v14/styles.xml",
-                    "from": {
-                        "startLines": "7",
-                        "startColumns": "4",
-                        "startOffsets": "220",
-                        "endLines": "9",
-                        "endColumns": "12",
-                        "endOffsets": "366"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "152"
+                        "startLines": "5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "202,246,290,338,389,440,481,532,579,627,702,777,855,917,992,1028",
+                        "endColumns": "43,43,47,50,50,40,50,46,47,74,74,77,61,74,35,59",
+                        "endOffsets": "241,285,333,384,435,476,527,574,622,697,772,850,912,987,1023,1083"
                     }
                 }
             ]

@@ -8,5 +8,15 @@
 	<string name="menu_about">О программе</string>
 	<string name="menu_set">Настройки</string>
 	<string name="sleep">Уходить в сон</string>
-	
+    <string name="title">Как разбавить спирт водой</string>
+    <string name="conditions">При 20°С</string>
+    <string name="textV0">Объём исходного спирта, мл</string>
+    <string name="textN0">Крепость исходного спирта, °\n(35°..95°)</string>
+    <string name="textN1">Требуемая крепость спирта, °\n(30°..90°)</string>
+    <string name="calc">РАССЧИТАТЬ</string>
+    <string name="textV1">Добавить воды\nпо таблице Г.И. Фертмана</string>
+    <string name="textV">Объём полученного раствора\nс учётом сжатия</string>
+    <string name="text_">-</string>
+    <string name="hintV0">объем</string>
+
 </resources>

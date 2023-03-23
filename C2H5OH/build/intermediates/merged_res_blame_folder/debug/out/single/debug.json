@@ -1,30 +1,82 @@
 [
     {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/menu_menu_main.xml.flat",
         "source": "ru.t022.c2h5oh.C2H5OH-main-7:/menu/menu_main.xml"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-xhdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-xhdpi/ic_launcher.png"
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-xxhdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-xxhdpi/ic_launcher.png"
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-mdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-mdpi/ic_launcher.png"
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/drawable-hdpi_ic_launcher.png.flat",
-        "source": "ru.t022.c2h5oh.C2H5OH-main-7:/drawable-hdpi/ic_launcher.png"
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/xml_settings.xml.flat",
         "source": "ru.t022.c2h5oh.C2H5OH-main-7:/xml/settings.xml"
     },
     {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/layout_activity_fullscreen.xml.flat",
         "source": "ru.t022.c2h5oh.C2H5OH-main-7:/layout/activity_fullscreen.xml"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ru.t022.c2h5oh.C2H5OH-merged_res-5:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "ru.t022.c2h5oh.C2H5OH-debug-6:/mipmap-xxxhdpi/ic_launcher_round.png"
     }
 ]
