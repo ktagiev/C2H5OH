@@ -1,5 +1,6 @@
 package ru.t022.c2h5oh;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -70,7 +71,7 @@ public class MainActivity extends Activity
 		onRead();
 		defaultColor=txtV0.getCurrentTextColor();
 
-		OnClickListener oclBtnRes = v -> {
+		@SuppressLint("DefaultLocale") OnClickListener oclBtnRes = v -> {
 			// X = 100NP/M — 100P
 			// Где N0 – начальная крепость спирта;
 			// V0 — объем изначального спирта в миллилитрах ;
@@ -78,7 +79,7 @@ public class MainActivity extends Activity
 			// X — количество мл воды, которые следует добавить к изначальному раствору.
 			try
 			{
-				V0 = Integer.valueOf(txtV0.getText().toString());
+				V0 = Integer.parseInt(txtV0.getText().toString());
 				if(V0>10000) {V0 = 10000; txtV0.setText(String.valueOf(V0));}
 
 				if(etxtV1.isFocused())
@@ -86,8 +87,8 @@ public class MainActivity extends Activity
 					V1 = Integer.parseInt(etxtV1.getText().toString());
 					if(V1>20000) {V1 = 20000; etxtV1.setText(String.valueOf(V1));}
 				}
-				N0 = Integer.valueOf(txtN0.getText().toString());
-				N1 = Integer.valueOf(txtN1.getText().toString());
+				N0 = Integer.parseInt(txtN0.getText().toString());
+				N1 = Integer.parseInt(txtN1.getText().toString());
 				if ((N0 < 35) || (N0 > 95))
 				{
 					showToast(v, "КРЕПОСТЬ НАЧАЛЬНОГО ВНЕ ДИАПАЗОНА");
@@ -122,10 +123,10 @@ public class MainActivity extends Activity
 					txtV0.setTextColor(defaultColor);
 				}
 
-				txtV.setText(String.valueOf(V1) + " мл");
+				txtV.setText(String.format("%d мл", V1));
 				if(X!=-1)
 				{
-					txtV1.setText(String.valueOf(X) + " мл");
+					txtV1.setText(String.format("%d мл", X));
 				}
 				else
 				{
