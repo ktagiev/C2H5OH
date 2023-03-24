@@ -55,15 +55,15 @@ public class MainActivity extends Activity
 
 		setContentView(R.layout.activity_fullscreen);
 
-		btnRes = (Button) findViewById(R.id.button1);
-		txtV = (TextView) findViewById(R.id.textViewV);
-		txtV1 = (TextView) findViewById(R.id.textViewV1);
-		txtV0 = (EditText) findViewById(R.id.editTextV0);
-		txtN0 = (EditText) findViewById(R.id.editTextN0);
-		txtN1 = (EditText) findViewById(R.id.editTextN1);
-		etxtV1 = (EditText) findViewById(R.id.editTextV1);
+		btnRes = findViewById(R.id.button1);
+		txtV = findViewById(R.id.textViewV);
+		txtV1 = findViewById(R.id.textViewV1);
+		txtV0 = findViewById(R.id.editTextV0);
+		txtN0 = findViewById(R.id.editTextN0);
+		txtN1 = findViewById(R.id.editTextN1);
+		etxtV1 = findViewById(R.id.editTextV1);
 		
-		sBarV0 = (SeekBar) findViewById(R.id.seekBarV0);
+		sBarV0 = findViewById(R.id.seekBarV0);
 		sBarV0.setEnabled(false);
 		sBarV0.setVisibility(View.INVISIBLE);
 
@@ -114,7 +114,7 @@ public class MainActivity extends Activity
 					X = Fertman.V0(V1, N0, N1);
 					V1 = Fertman.V1;
 					txtV0.setText(String.valueOf(Fertman.V0));
-					txtV0.setTextColor(Color.RED);
+					txtV0.setTextColor(Color.GREEN);
 				}
 				else
 				{

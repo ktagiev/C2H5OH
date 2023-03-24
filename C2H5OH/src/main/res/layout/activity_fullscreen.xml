@@ -167,6 +167,7 @@
 			android:inputType="number"
 			android:maxLength="6"
 			android:minHeight="48dp"
-			android:textAlignment="gravity" />
+			android:textAlignment="gravity"
+			android:textColorHint="#9E9E9E" />
 
 	</GridLayout>
