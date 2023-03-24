@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
+import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
@@ -31,6 +33,7 @@ public class MainActivity extends Activity
 	public static final String APP_PREFERENCES_V1 = "V1";
 	public static final String APP_PREFERENCES_N1 = "N1";
 
+	TextView text20C;
 	Button btnRes;
 	TextView txtV;
 	TextView txtV1;
@@ -54,7 +57,7 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_fullscreen);
-
+		text20C = findViewById(R.id.textView20C);
 		btnRes = findViewById(R.id.button1);
 		txtV = findViewById(R.id.textViewV);
 		txtV1 = findViewById(R.id.textViewV1);
@@ -70,8 +73,10 @@ public class MainActivity extends Activity
 		mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 		onRead();
 		defaultColor=txtV0.getCurrentTextColor();
+		registerForContextMenu(text20C);
 
-		@SuppressLint("DefaultLocale") OnClickListener oclBtnRes = v -> {
+		@SuppressLint("DefaultLocale")
+		OnClickListener oclBtnRes = v -> {
 			// X = 100NP/M — 100P
 			// Где N0 – начальная крепость спирта;
 			// V0 — объем изначального спирта в миллилитрах ;
@@ -212,7 +217,33 @@ public class MainActivity extends Activity
 		
 		sBarV0.setProgress(V0);
 	}
-	
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+									   ContextMenu.ContextMenuInfo menuInfo)
+	{
+		MenuItem mi = menu.add(0, 2, 0, "Настройки");
+		Intent intent = new Intent(this, PrefActivity.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+		mi.setIntent(intent);
+		menu.add(0, 1, 0, "О программе");
+	}
+	@Override
+	public boolean onContextItemSelected(MenuItem item)
+	{
+		int id = item.getItemId();
+
+		// Операции для выбранного пункта меню
+		switch (id)
+		{
+			case 1:
+				Toast.makeText(this, "© Константин Тагиев\nt022@mail.ru", Toast.LENGTH_LONG).show();
+				return true;
+			case 2:
+				//
+				break;
+		}
+		return super.onContextItemSelected(item);
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
@@ -255,9 +286,10 @@ public class MainActivity extends Activity
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this); 
 	        // читаем установленное значение из CheckBoxPreference
 
- //       PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
- //       PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
- //       wl.acquire();
+//        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+//        @SuppressLint("InvalidWakeLockTag")
+//		PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
+//        wl.acquire();
                
 	    if (prefs.getBoolean(getString(R.string.sleep), false))
 	    {// Уходить в сон
