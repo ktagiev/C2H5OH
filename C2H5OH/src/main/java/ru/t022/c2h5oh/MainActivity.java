@@ -235,7 +235,8 @@ public class MainActivity extends Activity
 		// Найдите элемент TextView внутри вашей разметки
 		// и установите ему соответствующий текст
 		TextView text = (TextView) dialog.findViewById(R.id.textAbout);
-		text.setText("© Константин Тагиев\\nt022@mail.ru\\nВерсия 2023");
+		text.setText("© Константин Тагиев\nt022@mail.ru\nВерсия 2023");
+		dialog.show();
 	}
 
 	@Override
