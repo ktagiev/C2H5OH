@@ -2,6 +2,7 @@ package ru.t022.c2h5oh;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,13 +12,11 @@ import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.view.ContextMenu;
 import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
@@ -51,10 +50,17 @@ public class MainActivity extends Activity
 
 	int defaultColor;
 
+	PowerManager pm;
+	PowerManager.WakeLock wl;
+
+	@SuppressLint("InvalidWakeLockTag")
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+
+		pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+		wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE,"Screen OFF");
 
 		setContentView(R.layout.activity_fullscreen);
 		text20C = findViewById(R.id.textView20C);
@@ -217,6 +223,21 @@ public class MainActivity extends Activity
 		
 		sBarV0.setProgress(V0);
 	}
+	public void ShowAbout()
+	{
+		//Toast.makeText(this, "© Константин Тагиев\nt022@mail.ru", Toast.LENGTH_LONG).show();
+		Dialog dialog = new Dialog(MainActivity.this);
+
+		// Установите заголовок
+		dialog.setTitle("О программе");
+		// Передайте ссылку на разметку
+		dialog.setContentView(R.layout.about);
+		// Найдите элемент TextView внутри вашей разметки
+		// и установите ему соответствующий текст
+		TextView text = (TextView) dialog.findViewById(R.id.textAbout);
+		text.setText("© Константин Тагиев\\nt022@mail.ru\\nВерсия 2023");
+	}
+
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v,
 									   ContextMenu.ContextMenuInfo menuInfo)
@@ -236,7 +257,7 @@ public class MainActivity extends Activity
 		switch (id)
 		{
 			case 1:
-				Toast.makeText(this, "© Константин Тагиев\nt022@mail.ru", Toast.LENGTH_LONG).show();
+				ShowAbout();
 				return true;
 			case 2:
 				//
@@ -244,41 +265,12 @@ public class MainActivity extends Activity
 		}
 		return super.onContextItemSelected(item);
 	}
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-	    MenuItem mi = menu.add(0, 2, 0, "Настройки");
-	    mi.setIntent(new Intent(this, PrefActivity.class));
-	    menu.add(0, 1, 0, "О программе");
-	    return super.onCreateOptionsMenu(menu);
-		
-	}
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-	    int id = item.getItemId();
 
-	    // Операции для выбранного пункта меню
-	    switch (id)
-	    {
-	        case 1:
-	        	Toast.makeText(this, "© Константин Тагиев\nt022@mail.ru", Toast.LENGTH_LONG).show();
-	            return true;
-	        case 2:
-	        	// 
-	        	break;
-	    }
-		
-        return super.onOptionsItemSelected(item);
-	}
-	
 	@Override
 	protected void onStart()
 	{
 		super.onStart();
 	}
-
 	@Override
 	protected void onResume()
 	{
@@ -286,19 +278,17 @@ public class MainActivity extends Activity
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this); 
 	        // читаем установленное значение из CheckBoxPreference
 
-//        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-//        @SuppressLint("InvalidWakeLockTag")
-//		PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
-//        wl.acquire();
-               
 	    if (prefs.getBoolean(getString(R.string.sleep), false))
 	    {// Уходить в сон
+			if (wl.isHeld())
+				wl.release();
 	    	Toast.makeText(this, "Уходить в сон", Toast.LENGTH_SHORT).show();
-	    	
 	    }
 	    else
 	    {
 	    	// не уходить в сон
+			if (wl.isHeld())
+				wl.acquire();
 	    	Toast.makeText(this, "НЕ Уходить в сон", Toast.LENGTH_SHORT).show();
 	    }
 

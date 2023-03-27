@@ -14,7 +14,7 @@ public class PrefActivity extends PreferenceActivity  implements OnSharedPrefere
 	 @Override
 	  protected void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    addPreferencesFromResource(R.xml.settings);
+	    addPreferencesFromResource(R.layout.settings);
  	}
  
 	 public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
