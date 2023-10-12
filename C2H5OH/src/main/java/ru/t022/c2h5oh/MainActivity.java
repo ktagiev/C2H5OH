@@ -272,6 +272,10 @@ public class MainActivity extends Activity
 	{
 		super.onStart();
 	}
+<<<<<<< HEAD
+=======
+	@SuppressLint("SuspiciousIndentation")
+>>>>>>> 001e0c1 (октябрь 2023)
 	@Override
 	protected void onResume()
 	{
