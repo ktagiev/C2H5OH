@@ -150,7 +150,7 @@ public class MainActivity extends Activity
 				showToast(v, "ВЫХОД ИЗ ДИАПАЗОНА");
 				return;
 			}
-			catch (ArrayIndexOutOfBoundsException e)
+			catch(ArrayIndexOutOfBoundsException e)
 			{
 				showToast(v, "ВЫХОД ЗA ТАБЛИЦУ ФЕРТМАНА");
 				return;
