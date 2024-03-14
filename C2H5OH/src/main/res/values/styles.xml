@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
@@ -11,17 +10,3 @@
     <!-- Application theme. -->
 
 </resources>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-
-    -->
-
-    <!-- Application theme. -->
-
-</resources>
->>>>>>> 001e0c1 (октябрь 2023)
