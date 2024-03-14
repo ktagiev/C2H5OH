@@ -248,6 +248,7 @@ public class MainActivity extends Activity
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
 		mi.setIntent(intent);
 		menu.add(0, 1, 0, "О программе");
+		menu.add(0, 0, 0, "Выход");
 	}
 	@Override
 	public boolean onContextItemSelected(MenuItem item)
@@ -260,8 +261,10 @@ public class MainActivity extends Activity
 			case 1:
 				ShowAbout();
 				return true;
-			case 2:
-				//
+			case 0:
+				// Выход из приложения
+				Toast.makeText(getApplicationContext(), "Задача закрыта", Toast.LENGTH_SHORT).show();
+				this.finishAndRemoveTask();
 				break;
 		}
 		return super.onContextItemSelected(item);
