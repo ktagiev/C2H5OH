@@ -1,5 +1,3 @@
-.gradle/*
-C2H5OH/build/*
-.idea/*
-.gradle
-
+**/.idea
+**/.gradle
+**/build
