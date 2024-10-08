@@ -10,10 +10,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -40,19 +43,21 @@ class MainActivity : ComponentActivity() {
     var calc_v1: Int = 0   // вычисленный объём полученного раствора
     var v1: Int = 0   // требуемый объём полученного раствора
 
-    fun savePref(){
+    fun savePref() {
         ed.putInt("v0", v0)
         ed.putInt("n0", n0)
         ed.putInt("n1", n1)
         ed.putInt("v1", v1)
         ed.apply()
     }
-    fun loadPref(){
+
+    fun loadPref() {
         v0 = pref.getInt("v0", 1000)
         n0 = pref.getInt("n0", 70)
         n1 = pref.getInt("n1", 40)
         v1 = pref.getInt("v1", 1750)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
@@ -79,7 +84,7 @@ class MainActivity : ComponentActivity() {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(modifier = Modifier.weight(2f), text = text)
+                Text(modifier = Modifier.weight(3f), text = text)
                 TextField(
                     modifier = Modifier.weight(1f),
                     value = message.value,
@@ -90,14 +95,16 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun output_field(text: String, message: MutableState<String>) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(modifier = Modifier.weight(2f), text = text)
-            Text(
-                text = message.value,
-                modifier = Modifier.weight(1f),
-                color = Color.Green,
-                textAlign = TextAlign.Center
-            )
+        Box() {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(modifier = Modifier.weight(3f), text = text)
+                Text(
+                    text = message.value,
+                    modifier = Modifier.weight(1f),
+                    color = Color.Green,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 
@@ -116,7 +123,8 @@ class MainActivity : ComponentActivity() {
                 color = Color(0xFF808000),
                 text = "Разбавить спирт водой\n при температуре 20°С",
                 modifier = modifier.align(Alignment.CenterHorizontally),
-                fontSize = 28.sp
+                fontSize = 28.sp,
+                lineHeight = 30.sp
             )
             input_field(modifier, "Объём исходного спирта, мл", v0_message)
             input_field(modifier, "Крепость исходного спирта, °\n [35°..95°]", n0_message)
@@ -128,7 +136,7 @@ class MainActivity : ComponentActivity() {
                     n1 = n1_message.value.toInt()
 
                     // здесь расчёт прямой
-                    x = Fertman.V1(v0,n0,n1)
+                    x = Fertman.calcV1(v0, n0, n1)
                     calc_v1 = Fertman.V1
 
                     x_message.value = x.toString()
@@ -138,35 +146,47 @@ class MainActivity : ComponentActivity() {
                 }) {
                 Text("Рассчитать", fontSize = 25.sp)
             }
-            Box(modifier = modifier) {
-                output_field("Добавить воды\n по таблице Г.И. Фертмана", x_message)
-            }
-            Box(modifier = modifier) {
-                TextField(modifier = modifier
-                    .align(Alignment.Center)
-                    .width(100.dp)
-                    .height(50.dp),
-                    value = v1_message.value, onValueChange = { newText -> v1_message.value = newText})
-                output_field("Объём полученного раствора\n с учётом сжатия", calc_v1_message)
-            }
-            Button(modifier = modifier.align(Alignment.CenterHorizontally),
-                onClick = {
-                    v1 = v1_message.value.toInt()
-                    n0 = n0_message.value.toInt()
-                    n1 = n1_message.value.toInt()
+            output_field("Добавить воды\n по таблице Г.И. Фертмана", x_message)
+//            Box(modifier = modifier) {
+//                TextField(modifier = modifier
+//                    .align(Alignment.Center)
+//                    .width(100.dp)
+//                    .height(50.dp),
+//                    value = v1_message.value, onValueChange = { newText -> v1_message.value = newText})
+            output_field("Объём полученного раствора\n с учётом сжатия", calc_v1_message)
+//            }
+//            input_field(modifier, "Требуемый объём\n раствора, мл", v1_message)
+            Row(
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(modifier = Modifier.weight(2f), text = "Требуемый объём\n раствора, мл")
+                TextField(
+                    modifier = Modifier.weight(1f),
+                    value = v1_message.value,
+                    onValueChange = { newText -> v1_message.value = newText })
+                IconButton(modifier = modifier
+                    .weight(1f),
+                    onClick = {
+                        v1 = v1_message.value.toInt()
+                        n0 = n0_message.value.toInt()
+                        n1 = n1_message.value.toInt()
 
-                    // здесь расчёт!!! пока прямой
-                    x = Fertman.V0(v1,n0,n1)
-                    v0 = Fertman.V0
-                    calc_v1 = Fertman.V1
+                        // здесь расчёт обратный
+                        x = Fertman.calcV0(v1, n0, n1)
+                        v0 = Fertman.V0
+                        calc_v1 = Fertman.V1
 
-                    x_message.value = x.toString()
-                    calc_v1_message.value = calc_v1.toString()
-                    v0_message.value = v0.toString()
+                        x_message.value = x.toString()
+                        calc_v1_message.value = calc_v1.toString()
+                        v0_message.value = v0.toString()
 
-                    savePref()
-                }) {
-                Text("Рассчитать", fontSize = 25.sp)
+                        savePref()
+                    }) {
+//                    Text("Рассчитать", fontSize = 25.sp)
+                Icon(Icons.Default.ArrowForward, contentDescription = "Рассчитать",modifier = Modifier.size(50.dp),
+                    tint = Color.Green)
+                }
             }
         }
     }

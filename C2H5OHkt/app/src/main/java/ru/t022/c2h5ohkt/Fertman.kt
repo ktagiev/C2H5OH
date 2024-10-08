@@ -136,7 +136,7 @@ object Fertman {
         return 0
     }
 
-    fun V0(v1: Int, n0: Int, n1: Int): Int {
+    fun calcV0(v1: Int, n0: Int, n1: Int): Int {
         N0 = n0
         N1 = n1
         V1 = v1
@@ -161,7 +161,7 @@ object Fertman {
         return X
     }
 
-    fun V1(v0: Int, n0: Int, n1: Int): Int {
+    fun calcV1(v0: Int, n0: Int, n1: Int): Int {
         V0 = v0
         N0 = n0
         N1 = n1
