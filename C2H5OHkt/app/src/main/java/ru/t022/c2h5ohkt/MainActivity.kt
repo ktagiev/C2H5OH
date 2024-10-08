@@ -12,12 +12,16 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Snackbar
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -26,14 +30,17 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
-    //var pref : SharedPreferences =  this.getSharedPreferences("C2H5OH", Context.MODE_PRIVATE)
     lateinit var pref: SharedPreferences
     lateinit var ed: SharedPreferences.Editor
     var v0: Int = 0   // объём исходного спирта
@@ -42,6 +49,8 @@ class MainActivity : ComponentActivity() {
     var x: Int = 0    // вычисленный объём воды
     var calc_v1: Int = 0   // вычисленный объём полученного раствора
     var v1: Int = 0   // требуемый объём полученного раствора
+    lateinit var  scope: CoroutineScope
+    lateinit var snackbarHostState: SnackbarHostState
 
     fun savePref() {
         ed.putInt("v0", v0)
@@ -65,9 +74,11 @@ class MainActivity : ComponentActivity() {
         ed = pref.edit()
         loadPref()
         setContent {
-//        ed  =  pref.edit()
+            snackbarHostState = remember { SnackbarHostState() }
+            scope = rememberCoroutineScope()
             C2H5OHktTheme(darkTheme = true) {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize(),
+                    snackbarHost = { SnackbarHost(snackbarHostState) }) { innerPadding ->
                     Greeting(
                         //modifier = Modifier.padding(innerPadding)
                         modifier = Modifier.padding(horizontal = 5.dp, vertical = 5.dp)
@@ -87,8 +98,10 @@ class MainActivity : ComponentActivity() {
                 Text(modifier = Modifier.weight(3f), text = text)
                 TextField(
                     modifier = Modifier.weight(1f),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number) ,
                     value = message.value,
-                    onValueChange = { newText -> message.value = newText })
+                    onValueChange = { newText -> message.value = newText }
+                )
             }
         }
     }
@@ -116,6 +129,7 @@ class MainActivity : ComponentActivity() {
         val x_message: MutableState<String> = remember { mutableStateOf("-") }
         val calc_v1_message: MutableState<String> = remember { mutableStateOf("-") }
         val v1_message: MutableState<String> = remember { mutableStateOf(v1.toString()) }
+
         Column(
             modifier = modifier
         ) {
@@ -134,7 +148,9 @@ class MainActivity : ComponentActivity() {
                     v0 = v0_message.value.toInt()
                     n0 = n0_message.value.toInt()
                     n1 = n1_message.value.toInt()
-
+                    scope.launch {
+                        snackbarHostState.showSnackbar("Расчёт")
+                    }
                     // здесь расчёт прямой
                     x = Fertman.calcV1(v0, n0, n1)
                     calc_v1 = Fertman.V1
@@ -163,6 +179,7 @@ class MainActivity : ComponentActivity() {
                 Text(modifier = Modifier.weight(2f), text = "Требуемый объём\n раствора, мл")
                 TextField(
                     modifier = Modifier.weight(1f),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     value = v1_message.value,
                     onValueChange = { newText -> v1_message.value = newText })
                 IconButton(modifier = modifier
